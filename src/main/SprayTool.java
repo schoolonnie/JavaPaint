@@ -18,8 +18,8 @@ public class SprayTool extends PaintTool {
 		
 		g2d.setColor(this.color);
 		
-		int radius = 15; // Spray area radius
-		int dotCount = 20; // Paint drops per spray
+		int radius = this.strokeSize*3; // Spray area radius
+		int dotCount = this.strokeSize*4; // Paint drops per spray
 		
 		for (int i = 0; i < dotCount; i++) {
 			// Generate offset based on mouse position

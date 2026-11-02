@@ -33,6 +33,14 @@ public class Canvas extends JPanel {
                     g2d.setColor(Color.WHITE);
                     g2d.fillRect(0, 0, currentWidth, currentHeight);
                 }
+                // Update color
+                brushTool.setColor(window.getCurrentColor());
+                sprayTool.setColor(window.getCurrentColor());
+                rectTool.setColor(window.getCurrentColor());
+                // Update stroke size
+                brushTool.setStrokeSize(window.getCurrentStroke());
+                sprayTool.setStrokeSize(window.getCurrentStroke());
+                rectTool.setStrokeSize(window.getCurrentStroke());
 
                 switch (window.getPaintMode()) {
                     case BRUSH -> brushTool.onPress(e.getPoint(), g2d);
@@ -44,6 +52,14 @@ public class Canvas extends JPanel {
 
             @Override
             public void mouseDragged(MouseEvent e) {
+            	// Update color
+                brushTool.setColor(window.getCurrentColor());
+                sprayTool.setColor(window.getCurrentColor());
+                rectTool.setColor(window.getCurrentColor());
+                // Update stroke size
+                brushTool.setStrokeSize(window.getCurrentStroke());
+                sprayTool.setStrokeSize(window.getCurrentStroke());
+                rectTool.setStrokeSize(window.getCurrentStroke());
                 switch (window.getPaintMode()) {
                     case BRUSH -> brushTool.onDrag(e.getPoint(), g2d);
                     case SPRAY -> sprayTool.onDrag(e.getPoint(), g2d);
