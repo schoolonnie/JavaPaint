@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build JavaPaint",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/bin\" && javac --release 25 -d \"${workspaceFolder}/bin\" \"${workspaceFolder}\"/src/main/*.java",
+      "problemMatcher": "$javac",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

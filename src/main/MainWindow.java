@@ -76,4 +76,12 @@ public class MainWindow extends JFrame {
     	BufferedImage newImage = SaveManager.loadImageFromPath(this.canvas, this.canvas.getCurrentImage());
         canvas.setCurrentImage(newImage);
     }
+    // Method for undoing
+    public void undoLastAction() {
+        canvas.undoLastAction();    
+    }
+    // Method for redoing
+    public void redoLastAction() {
+        canvas.redoLastAction();
+    }
 }
