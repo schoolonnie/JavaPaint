@@ -3,7 +3,7 @@ package main;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-
+import java.awt.image.BufferedImage;
 import javax.swing.JFrame;
 
 public class MainWindow extends JFrame {
@@ -66,5 +66,14 @@ public class MainWindow extends JFrame {
     // Method allowing for Canvas to see mode
     public PaintMode getPaintMode() {
     	return this.activeMode;
+    }
+    // Method for saving
+    public void saveCanvas() {
+    	SaveManager.saveImageAtPath(this.canvas, this.canvas.getCurrentImage());
+    }
+    // Method for loading
+    public void loadCanvas() {
+    	BufferedImage newImage = SaveManager.loadImageFromPath(this.canvas, this.canvas.getCurrentImage());
+        canvas.setCurrentImage(newImage);
     }
 }

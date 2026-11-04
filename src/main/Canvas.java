@@ -1,10 +1,10 @@
 package main;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import javax.swing.*;
 
 public class Canvas extends JPanel {
     private MainWindow window;
@@ -135,5 +135,17 @@ public class Canvas extends JPanel {
             
             previewG2d.dispose(); // Destroy the temp pen safely
         }
+    }
+    // Getter for saving and loading BufferedImage
+    public BufferedImage getCurrentImage() {
+    	return canvasImage;
+    }
+    // Setter for loading BufferedImage
+    public void setCurrentImage(BufferedImage newImage) {
+    	// Replace the current canvas image with the new one
+    	canvasImage = new BufferedImage(newImage.getWidth(), newImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
+    	g2d = canvasImage.createGraphics();
+    	g2d.drawImage(newImage, 0, 0, null);
+    	repaint(); // Refresh the canvas to show the new image
     }
 }

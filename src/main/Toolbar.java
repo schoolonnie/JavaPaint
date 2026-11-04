@@ -2,7 +2,6 @@ package main;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
-
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
@@ -12,6 +11,8 @@ import javax.swing.JPanel;
 public class Toolbar extends JPanel {
 	
 	private MainWindow window;
+	private JButton saveBtn;
+	private JButton loadBtn;
     private JButton brushBtn;
     private JButton sprayBtn;
     private JButton rectBtn;
@@ -24,6 +25,8 @@ public class Toolbar extends JPanel {
     	this.window = window;
     	
     	// Create buttons
+		saveBtn = new JButton("↓");
+    	loadBtn = new JButton("↑");
     	brushBtn = new JButton("🖌");
     	sprayBtn = new JButton("░");
     	rectBtn = new JButton("□");
@@ -36,6 +39,8 @@ public class Toolbar extends JPanel {
 	    this.setLayout(new FlowLayout(FlowLayout.CENTER));
 	    
 	    // Button actions
+		saveBtn.addActionListener(e -> window.saveCanvas());
+		loadBtn.addActionListener(e -> window.loadCanvas());
 	    brushBtn.addActionListener(e -> window.setPaintMode(PaintMode.BRUSH));
         sprayBtn.addActionListener(e -> window.setPaintMode(PaintMode.SPRAY));
         rectBtn.addActionListener(e -> window.setPaintMode(PaintMode.RECT));
@@ -69,6 +74,8 @@ public class Toolbar extends JPanel {
         });
 	    
 	    // Assemble and display
+	    this.add(saveBtn);
+	    this.add(loadBtn);
 	    this.add(brushBtn);
 	    this.add(sprayBtn);
 	    this.add(rectBtn);
