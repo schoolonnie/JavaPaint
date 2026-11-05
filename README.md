@@ -5,12 +5,19 @@ Requires Java 25 to run
 A simple painting app written in Java during a 2-week sprint.
 
 Features:
+
     - Standard brush, spray paint, and box drawing
+    
     - Eraser
+    
     - Canvas clear
+    
     - Color and stroke-size options
+    
     - Save and load images as png or jpg
+    
     - Undo and redo for quick-fixing mistakes
+    
 
 If Java 25 is installed, the packaged JavaPaint.jar file should run the program without the need for compiling.
 
