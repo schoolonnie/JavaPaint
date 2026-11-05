@@ -13,6 +13,7 @@ public class BrushTool extends PaintTool {
 
     @Override
     public void onDrag(Point currentPoint, Graphics2D g2d) {
+        // Draw a line from the last point to the current point
         if (g2d != null && lastPoint != null) {
             g2d.setColor(this.color); // Uses inherited color
             g2d.setStroke(new BasicStroke(this.strokeSize, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND)); // Uses inherited size

@@ -23,7 +23,7 @@ public class Canvas extends JPanel {
     public Canvas(MainWindow window) {
         this.window = window;
         setBackground(Color.WHITE);
-
+        // Set up mouse listeners for drawing
         MouseAdapter mouseHandler = new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -108,6 +108,7 @@ public class Canvas extends JPanel {
         addMouseMotionListener(mouseHandler);
     }
 
+    // Override paintComponent to draw the canvas image and any live previews
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

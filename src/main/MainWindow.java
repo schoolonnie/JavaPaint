@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JFrame;
 
 public class MainWindow extends JFrame {
+	// Variable initialization
 	private PaintMode activeMode = PaintMode.BRUSH;
 	private Color currentColor = Color.black;
 	private int currentStrokeSize = 5;
@@ -16,17 +17,18 @@ public class MainWindow extends JFrame {
 
     public MainWindow() {
         // Configure the window itself
-        super("Javaint");
-        setTitle("Javaint");
+        super("JavaPaint");
+        setTitle("JavaPaint");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setPreferredSize(new Dimension(800, 600));
         
-        // Add content
+        // Create instance of content
         canvas = new Canvas(this);
         toolbar = new Toolbar(this);
         
         this.pack();
         this.setLocationRelativeTo(null);
+        // Add content to window
         this.getContentPane().add(toolbar, BorderLayout.NORTH); 
         this.getContentPane().add(canvas, BorderLayout.CENTER);
     }
