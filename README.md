@@ -28,7 +28,9 @@ If Java 25 is installed, the packaged JavaPaint.jar file should run the program 
 Primarily written in Eclipse, but switched to VSCode for familiarity
 
 Written in Java
+
 Requires Java 25 to run
+
 Utilizes Java Swing for GUI
 
 # Useful Websites
