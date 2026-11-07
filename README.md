@@ -21,7 +21,7 @@ Features:
 
 If Java 25 is installed, the packaged JavaPaint.jar file should run the program without the need for compiling.
 
-[Software Demo Video]()
+[Software Demo Video](https://drive.google.com/file/d/1B4SlyZ_VliBlnk7zK299ravGO2_oHury/view?usp=sharing)
 
 # Development Environment
 

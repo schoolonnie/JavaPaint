@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Toolbar extends JPanel {
-	
+	// I know the variables can be finalized, 
+	// but I prefer to keep my organization this way
 	private MainWindow window;
 	private JButton undoBtn;
 	private JButton redoBtn;
